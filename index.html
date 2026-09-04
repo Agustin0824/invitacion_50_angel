@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090806" />
+  <title>Invitación 50 Aniversario Ángel Agustín Vicente</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #f4d27a;
+      --gold-bright: #ffe8a7;
+      --gold-dark: #a97824;
+      --cream: #fff7df;
+      --white: #fffdf7;
+      --glass: rgba(7, 6, 4, 0.72);
+      --line: rgba(244, 210, 122, 0.55);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 22px 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background:
+        radial-gradient(circle at 50% 10%, rgba(190, 139, 38, 0.16), transparent 35%),
+        #030303;
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Capa de partículas generada con JavaScript */
+    #particles {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 20;
+    }
+
+    .invitation {
+      position: relative;
+      width: min(100%, 620px);
+      min-height: 900px;
+      overflow: hidden;
+      isolation: isolate;
+
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.18) 0%,
+          rgba(0, 0, 0, 0.45) 35%,
+          rgba(0, 0, 0, 0.78) 72%,
+          rgba(0, 0, 0, 0.92) 100%
+        ),
+        url("fondo_azul.png") center top / cover no-repeat;
+
+      border: 1px solid rgba(244, 210, 122, 0.8);
+      border-radius: 22px;
+      box-shadow:
+        0 0 0 5px rgba(0, 0, 0, 0.7),
+        0 0 0 6px rgba(244, 210, 122, 0.18),
+        0 25px 80px rgba(0, 0, 0, 0.85),
+        inset 0 0 60px rgba(0, 0, 0, 0.55);
+
+      padding: 46px 34px 48px;
+      text-align: center;
+    }
+
+    .invitation::before,
+    .invitation::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .invitation::before {
+      inset: 14px;
+      border: 1px solid rgba(244, 210, 122, 0.32);
+      border-radius: 15px;
+    }
+
+    .invitation::after {
+      inset: 24px;
+      border: 1px solid rgba(244, 210, 122, 0.12);
+      border-radius: 11px;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .cross {
+      width: 28px;
+      height: 34px;
+      position: relative;
+      margin: 0 auto 14px;
+      opacity: 0.95;
+      filter: drop-shadow(0 0 8px rgba(244, 210, 122, 0.5));
+    }
+
+    .cross::before,
+    .cross::after {
+      content: "";
+      position: absolute;
+      background: linear-gradient(180deg, var(--gold-bright), var(--gold-dark));
+      border-radius: 3px;
+    }
+
+    .cross::before {
+      width: 5px;
+      height: 34px;
+      left: 12px;
+      top: 0;
+    }
+
+    .cross::after {
+      width: 22px;
+      height: 5px;
+      left: 3px;
+      top: 9px;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .header-poem {
+      margin: 0 auto 28px;
+      max-width: 510px;
+      color: var(--cream);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(20px, 4.8vw, 27px);
+      font-style: italic;
+      font-weight: 600;
+      line-height: 1.28;
+      text-shadow:
+        0 2px 12px #000,
+        0 0 2px #000;
+    }
+
+    .family-invite {
+      margin: 0 auto 22px;
+      max-width: 500px;
+      color: #fff9e8;
+      font-size: clamp(13px, 3.4vw, 15px);
+      font-weight: 500;
+      line-height: 1.65;
+      text-shadow: 0 2px 8px #000;
+    }
+
+    .family-invite strong {
+      color: var(--gold-bright);
+    }
+
+    .age {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 106px;
+      height: 106px;
+      margin: 2px auto 10px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      background:
+        radial-gradient(circle, rgba(244, 210, 122, 0.16), rgba(0, 0, 0, 0.56) 68%);
+      color: var(--gold-bright);
+      font-family: 'Cinzel', serif;
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -2px;
+      box-shadow:
+        0 0 24px rgba(244, 210, 122, 0.14),
+        inset 0 0 20px rgba(244, 210, 122, 0.08);
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+
+    .age:hover {
+      transform: scale(1.06) rotate(2deg);
+      box-shadow:
+        0 0 35px rgba(244, 210, 122, 0.30),
+        inset 0 0 25px rgba(244, 210, 122, 0.14);
+    }
+
+    .anniversary-label {
+      margin: 0 0 17px;
+      color: var(--gold);
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .main-title {
+      margin: 0 auto 25px;
+      max-width: 540px;
+      color: var(--white);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(27px, 7vw, 42px);
+      font-weight: 700;
+      line-height: 1.18;
+      letter-spacing: 1px;
+      text-shadow:
+        0 3px 14px #000,
+        0 0 2px #000;
+    }
+
+    .main-title .name {
+      display: inline-block;
+      margin-top: 7px;
+      color: var(--gold-bright);
+      font-size: 0.88em;
+      text-shadow:
+        0 0 18px rgba(244, 210, 122, 0.15),
+        0 3px 14px #000;
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: min(100%, 390px);
+      margin: 0 auto 24px;
+      color: var(--gold);
+    }
+
+    .ornament span {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--line));
+    }
+
+    .ornament span:last-child {
+      background: linear-gradient(90deg, var(--line), transparent);
+    }
+
+    .ornament b {
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .details {
+      margin: 0 auto 24px;
+      max-width: 500px;
+      color: #fff9e8;
+      font-size: clamp(13px, 3.4vw, 15px);
+      line-height: 1.72;
+      text-shadow: 0 2px 8px #000;
+    }
+
+    .details strong {
+      color: var(--gold-bright);
+      font-weight: 700;
+    }
+
+    .highlight {
+      display: inline-block;
+      margin-top: 7px;
+      color: var(--cream);
+      font-weight: 600;
+    }
+
+    .location-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      margin: 2px auto 28px;
+      padding: 12px 20px;
+      color: #160f04;
+      background: linear-gradient(135deg, var(--gold-bright), #c99a3b);
+      border: 1px solid var(--gold-bright);
+      border-radius: 999px;
+      box-shadow:
+        0 7px 22px rgba(0, 0, 0, 0.45),
+        0 0 20px rgba(244, 210, 122, 0.12);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      transition: transform .25s ease, filter .25s ease, box-shadow .25s ease;
+    }
+
+    .location-link:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.08);
+      box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.55),
+        0 0 28px rgba(244, 210, 122, 0.24);
+    }
+
+    .location-link:active {
+      transform: translateY(0);
+    }
+
+    .footer-message {
+      margin: 24px auto 0;
+      color: var(--gold-bright);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(18px, 4vw, 22px);
+      font-style: italic;
+      font-weight: 600;
+      line-height: 1.5;
+      text-shadow: 0 2px 10px #000;
+    }
+
+    .signature {
+      margin-top: 14px;
+      color: rgba(255, 247, 223, 0.78);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-style: italic;
+    }
+
+    /* Animación de entrada */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      animation: reveal .85s cubic-bezier(.2,.8,.2,1) forwards;
+    }
+
+    .delay-1 { animation-delay: .12s; }
+    .delay-2 { animation-delay: .24s; }
+    .delay-3 { animation-delay: .36s; }
+    .delay-4 { animation-delay: .48s; }
+    .delay-5 { animation-delay: .60s; }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+        align-items: flex-start;
+      }
+
+      .invitation {
+        min-height: 0;
+        padding: 34px 22px 38px;
+        border-radius: 17px;
+        background-position: center top;
+      }
+
+      .invitation::before {
+        inset: 9px;
+      }
+
+      .invitation::after {
+        inset: 16px;
+      }
+
+      .header-poem {
+        margin-bottom: 23px;
+      }
+
+      .age {
+        width: 88px;
+        height: 88px;
+        font-size: 39px;
+      }
+
+      .main-title {
+        letter-spacing: .4px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+        animation: none;
+      }
+
+      #particles {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <main class="invitation" role="main" aria-label="Invitación 50 aniversario de Ángel Agustín Vicente">
+    <div class="content">
+
+      <div class="cross reveal" aria-hidden="true"></div>
+
+      <p class="eyebrow reveal delay-1">Una vida bendecida por Dios</p>
+
+      <div class="header-poem reveal delay-1" aria-label="Poema de invitación">
+        Jesús ha guiado tus pasos con amor,<br>
+        sosteniendo tu camino con su luz.<br>
+        En cada año, en cada amanecer,<br>
+        su gracia te ha ayudado a crecer.<br><br>
+
+        Hoy damos gracias al Señor por tu vida,<br>
+        por las bendiciones que nunca se olvidan.<br>
+        Cincuenta años bajo su mirada,<br>
+        y una nueva etapa por Dios acompañada.
+      </div>
+
+      <p class="family-invite reveal delay-2">
+        La familia <strong>Agustin Dolores</strong>, tiene el placer de invitar a usted y su familia a la celebración del
+      </p>
+
+      <div class="age reveal delay-2" aria-label="50 años">50</div>
+
+      <p class="anniversary-label reveal delay-3">Aniversario</p>
+
+      <h1 class="main-title reveal delay-3">
+        de<br>
+        <span class="name">Ángel Agustín Vicente</span>
+      </h1>
+
+      <div class="ornament reveal delay-3" aria-hidden="true">
+        <span></span>
+        <b>✦</b>
+        <span></span>
+      </div>
+
+      <p class="details reveal delay-4">
+        La celebración se llevará a cabo el día <strong>26 de julio del 2025</strong>
+        a partir de las <strong>15:00 hrs.</strong> en:<br>
+        <span class="highlight">Av. Vicente Guerrero No. 139, Tepeteno de I., Tlatlauquitepec, Puebla.</span>
+      </p>
+
+      <a
+        href="https://maps.app.goo.gl/EYzeCQni4yLnmn7j6"
+        target="_blank"
+        rel="noopener"
+        class="location-link reveal delay-4"
+        id="locationLink"
+        aria-label="Abrir ubicación de la celebración en Google Maps"
+      >
+        <span aria-hidden="true">⌖</span>
+        Pulse para ver la Ubicación
+      </a>
+
+      <p class="details reveal delay-5">
+        Celebremos juntos esta fecha tan significativa, en compañía de quienes forman parte de la vida de nuestro querido
+        <strong>Ángel</strong>.<br>
+        Será un momento lleno de alegría, recuerdos y amor familiar.<br>
+        <strong>¡Tu presencia será nuestro mejor regalo!</strong>
+      </p>
+
+      <p class="signature reveal delay-5">Con cariño, familia y amigos.</p>
+
+    </div>
+  </main>
+
+  <script>
+    (() => {
+      'use strict';
+
+      // ------------------------------------------------------------
+      // Partículas doradas: efecto visual ligero sobre el fondo.
+      // ------------------------------------------------------------
+      const canvas = document.getElementById('particles');
+      const ctx = canvas.getContext('2d');
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (!reduceMotion) {
+        let particles = [];
+        let width = 0;
+        let height = 0;
+        const density = 0.000055;
+
+        function resizeCanvas() {
+          const ratio = Math.min(window.devicePixelRatio || 1, 2);
+          width = window.innerWidth;
+          height = window.innerHeight;
+
+          canvas.width = width * ratio;
+          canvas.height = height * ratio;
+          canvas.style.width = width + 'px';
+          canvas.style.height = height + 'px';
+
+          ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+          const amount = Math.max(18, Math.min(75, Math.floor(width * height * density)));
+          particles = Array.from({ length: amount }, () => ({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            r: Math.random() * 1.6 + 0.35,
+            alpha: Math.random() * 0.65 + 0.15,
+            speed: Math.random() * 0.18 + 0.04,
+            drift: (Math.random() - 0.5) * 0.16,
+            phase: Math.random() * Math.PI * 2
+          }));
+        }
+
+        function animate(time = 0) {
+          ctx.clearRect(0, 0, width, height);
+
+          particles.forEach(p => {
+            p.y -= p.speed;
+            p.x += p.drift;
+            p.phase += 0.015;
+
+            if (p.y < -10) {
+              p.y = height + 10;
+              p.x = Math.random() * width;
+            }
+
+            if (p.x < -10) p.x = width + 10;
+            if (p.x > width + 10) p.x = -10;
+
+            const pulse = 0.55 + Math.sin(p.phase + time * 0.001) * 0.35;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(244, 210, 122, ${Math.max(0.05, p.alpha * pulse)})`;
+            ctx.fill();
+          });
+
+          requestAnimationFrame(animate);
+        }
+
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+        requestAnimationFrame(animate);
+      }
+
+      // ------------------------------------------------------------
+      // Mantiene el mismo enlace de Google Maps y añade una pequeña
+      // respuesta visual al pulsar el botón.
+      // ------------------------------------------------------------
+      const locationLink = document.getElementById('locationLink');
+
+      locationLink.addEventListener('click', () => {
+        locationLink.style.transform = 'scale(0.97)';
+        setTimeout(() => {
+          locationLink.style.transform = '';
+        }, 160);
+      });
+
+      // ------------------------------------------------------------
+      // Efecto de brillo temporal al tocar/clicar el número 50.
+      // ------------------------------------------------------------
+      const age = document.querySelector('.age');
+
+      age.addEventListener('click', () => {
+        age.animate(
+          [
+            { transform: 'scale(1)' },
+            { transform: 'scale(1.12) rotate(-2deg)' },
+            { transform: 'scale(1.04) rotate(2deg)' },
+            { transform: 'scale(1)' }
+          ],
+          {
+            duration: 650,
+            easing: 'cubic-bezier(.2,.8,.2,1)'
+          }
+        );
+      });
+    })();
+  </script>
+</body>
+</html>
