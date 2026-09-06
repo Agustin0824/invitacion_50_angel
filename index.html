@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#090806" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090806">
   <title>Invitación 50 Aniversario Angel Agustin Vicente</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +43,6 @@
       overflow-x: hidden;
     }
 
-    /* Capa de partículas generada con JavaScript */
     #particles {
       position: fixed;
       inset: 0;
@@ -59,8 +58,6 @@
       min-height: 900px;
       overflow: hidden;
       isolation: isolate;
-
-      /* FONDO AZUL ORIGINAL */
       background:
         linear-gradient(
           to bottom,
@@ -70,7 +67,6 @@
           rgba(0, 0, 0, 0.92) 100%
         ),
         url("fondo_azul.png") center top / cover no-repeat;
-
       border: 1px solid rgba(244, 210, 122, 0.8);
       border-radius: 22px;
       box-shadow:
@@ -78,7 +74,6 @@
         0 0 0 6px rgba(244, 210, 122, 0.18),
         0 25px 80px rgba(0, 0, 0, 0.85),
         inset 0 0 60px rgba(0, 0, 0, 0.55);
-
       padding: 46px 34px 48px;
       text-align: center;
     }
@@ -109,26 +104,12 @@
     }
 
     .eyebrow {
-      margin: 0 0 18px;
+      margin: 0 0 22px;
       color: var(--gold);
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 4px;
       text-transform: uppercase;
-    }
-
-    .header-poem {
-      margin: 0 auto 28px;
-      max-width: 510px;
-      color: var(--cream);
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(20px, 4.8vw, 27px);
-      font-style: italic;
-      font-weight: 600;
-      line-height: 1.28;
-      text-shadow:
-        0 2px 12px #000,
-        0 0 2px #000;
     }
 
     .family-invite {
@@ -155,7 +136,11 @@
       border: 1px solid var(--gold);
       border-radius: 50%;
       background:
-        radial-gradient(circle, rgba(244, 210, 122, 0.16), rgba(0, 0, 0, 0.56) 68%);
+        radial-gradient(
+          circle,
+          rgba(244, 210, 122, 0.16),
+          rgba(0, 0, 0, 0.56) 68%
+        );
       color: var(--gold-bright);
       font-family: 'Cinzel', serif;
       font-size: 48px;
@@ -193,9 +178,7 @@
       font-weight: 700;
       line-height: 1.18;
       letter-spacing: 1px;
-      text-shadow:
-        0 3px 14px #000,
-        0 0 2px #000;
+      text-shadow: 0 3px 14px #000, 0 0 2px #000;
     }
 
     .main-title .name {
@@ -232,7 +215,6 @@
       font-weight: 500;
     }
 
-    /* INVITACIÓN A LA MISA */
     .mass-invite {
       margin: 8px auto 26px;
       max-width: 510px;
@@ -323,37 +305,31 @@
       transform: translateY(0);
     }
 
-    .footer-message {
-      margin: 24px auto 0;
-      color: var(--gold-bright);
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(18px, 4vw, 22px);
-      font-style: italic;
-      font-weight: 600;
-      line-height: 1.5;
-      text-shadow: 0 2px 10px #000;
-    }
-
-    .signature {
-      margin-top: 14px;
-      color: rgba(255, 247, 223, 0.78);
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 17px;
-      font-style: italic;
-    }
-
-    /* Animación de entrada */
     .reveal {
       opacity: 0;
       transform: translateY(18px);
       animation: reveal .85s cubic-bezier(.2,.8,.2,1) forwards;
     }
 
-    .delay-1 { animation-delay: .12s; }
-    .delay-2 { animation-delay: .24s; }
-    .delay-3 { animation-delay: .36s; }
-    .delay-4 { animation-delay: .48s; }
-    .delay-5 { animation-delay: .60s; }
+    .delay-1 {
+      animation-delay: .12s;
+    }
+
+    .delay-2 {
+      animation-delay: .24s;
+    }
+
+    .delay-3 {
+      animation-delay: .36s;
+    }
+
+    .delay-4 {
+      animation-delay: .48s;
+    }
+
+    .delay-5 {
+      animation-delay: .60s;
+    }
 
     @keyframes reveal {
       to {
@@ -383,8 +359,14 @@
         inset: 16px;
       }
 
-      .header-poem {
-        margin-bottom: 23px;
+      .age {
+        width: 88px;
+        height: 88px;
+        font-size: 39px;
+      }
+
+      .main-title {
+        letter-spacing: .4px;
       }
 
       .mass-invite {
@@ -394,16 +376,6 @@
 
       .mass-title {
         letter-spacing: 1px;
-      }
-
-      .age {
-        width: 88px;
-        height: 88px;
-        font-size: 39px;
-      }
-
-      .main-title {
-        letter-spacing: .4px;
       }
     }
 
@@ -428,30 +400,22 @@
 <body>
   <canvas id="particles" aria-hidden="true"></canvas>
 
-  <main class="invitation" role="main" aria-label="Invitación 50 aniversario de Ángel Agustín Vicente">
+  <main class="invitation" role="main" aria-label="Invitación 50 aniversario de Angel Agustin Vicente">
     <div class="content">
 
       <p class="eyebrow reveal delay-1">Una vida bendecida por Dios</p>
-
-      <div class="header-poem reveal delay-1" aria-label="Poema de invitación">
-        Jesús ha guiado tus pasos con amor,<br>
-        sosteniendo tu camino con su luz.<br>
-        En cada año, en cada amanecer,<br>
-        su gracia te ha ayudado a crecer.<br><br>
-
-        Hoy damos gracias al Señor por tu vida,<br>
-        por las bendiciones que nunca se olvidan.<br>
-        Cincuenta años bajo su mirada,<br>
-        y una nueva etapa por Dios acompañada.
-      </div>
 
       <p class="family-invite reveal delay-2">
         La familia <strong>Agustin Dolores</strong>, tiene el placer de invitar a usted y su familia a la celebración del
       </p>
 
-      <div class="age reveal delay-2" aria-label="50 años">50</div>
+      <div class="age reveal delay-2" aria-label="50 años">
+        50
+      </div>
 
-      <p class="anniversary-label reveal delay-3">Aniversario</p>
+      <p class="anniversary-label reveal delay-3">
+        Aniversario
+      </p>
 
       <h1 class="main-title reveal delay-3">
         de<br>
@@ -465,21 +429,24 @@
       </div>
 
       <section class="mass-invite reveal delay-4" aria-label="Invitación a la Santa Misa">
-        <h2 class="mass-title">Invitación a la Santa Misa</h2>
+        <h2 class="mass-title">
+          Invitación a la Santa Misa
+        </h2>
 
         <p class="mass-text">
           Con motivo de la celebración de los
-          50 años de vida de nuestro festejado,
+          <strong>50 años de vida de Angel Agustin Vicente</strong>,
           se celebrará una Santa Misa en su honor el día
           <strong>3 de octubre del 2026</strong>,
-          a las <strong>15:30 hrs.</strong>, en la iglesia de <strong>San Luis Gonzaga</strong>, 
-          de la comunidad de <strong>Tepeteno de I.</strong>
+          a las <strong>15:30 hrs.</strong>, en la iglesia
+          <strong>San Luis Gonzaga</strong>, de la comunidad de
+          <strong>Tepeteno de I.</strong>
         </p>
       </section>
 
       <p class="details reveal delay-4">
-        Después de la Santa Misa, agradecemos su compañía para continuar con esta celebración tan especial en el
-        domicilio de la familia en:<br>
+        Después de la Santa Misa, agradecemos su compañía para continuar con esta celebración tan especial en:<br>
+
         <span class="highlight">
           Av. Vicente Guerrero No. 109, Tepeteno de I., Tlatlauquitepec, Puebla.
         </span>
@@ -499,8 +466,10 @@
 
       <p class="details reveal delay-5">
         Celebremos juntos esta fecha tan significativa, en compañía de quienes forman parte de la vida de nuestro querido
-        <strong>Ángel</strong>.<br>
+        <strong>Angel</strong>.<br>
+
         Será un momento lleno de alegría, recuerdos y amor familiar.<br>
+
         <strong>¡Tu presencia será nuestro mejor regalo!</strong>
       </p>
 
@@ -513,12 +482,15 @@
 
       const canvas = document.getElementById('particles');
       const ctx = canvas.getContext('2d');
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      const reduceMotion =
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       if (!reduceMotion) {
         let particles = [];
         let width = 0;
         let height = 0;
+
         const density = 0.000055;
 
         function resizeCanvas() {
@@ -529,6 +501,7 @@
 
           canvas.width = width * ratio;
           canvas.height = height * ratio;
+
           canvas.style.width = width + 'px';
           canvas.style.height = height + 'px';
 
@@ -536,18 +509,24 @@
 
           const amount = Math.max(
             18,
-            Math.min(75, Math.floor(width * height * density))
+            Math.min(
+              75,
+              Math.floor(width * height * density)
+            )
           );
 
-          particles = Array.from({ length: amount }, () => ({
-            x: Math.random() * width,
-            y: Math.random() * height,
-            r: Math.random() * 1.6 + 0.35,
-            alpha: Math.random() * 0.65 + 0.15,
-            speed: Math.random() * 0.18 + 0.04,
-            drift: (Math.random() - 0.5) * 0.16,
-            phase: Math.random() * Math.PI * 2
-          }));
+          particles = Array.from(
+            { length: amount },
+            () => ({
+              x: Math.random() * width,
+              y: Math.random() * height,
+              r: Math.random() * 1.6 + 0.35,
+              alpha: Math.random() * 0.65 + 0.15,
+              speed: Math.random() * 0.18 + 0.04,
+              drift: (Math.random() - 0.5) * 0.16,
+              phase: Math.random() * Math.PI * 2
+            })
+          );
         }
 
         function animate(time = 0) {
@@ -563,14 +542,27 @@
               p.x = Math.random() * width;
             }
 
-            if (p.x < -10) p.x = width + 10;
-            if (p.x > width + 10) p.x = -10;
+            if (p.x < -10) {
+              p.x = width + 10;
+            }
+
+            if (p.x > width + 10) {
+              p.x = -10;
+            }
 
             const pulse =
-              0.55 + Math.sin(p.phase + time * 0.001) * 0.35;
+              0.55 +
+              Math.sin(p.phase + time * 0.001) * 0.35;
 
             ctx.beginPath();
-            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+
+            ctx.arc(
+              p.x,
+              p.y,
+              p.r,
+              0,
+              Math.PI * 2
+            );
 
             ctx.fillStyle =
               `rgba(244, 210, 122, ${Math.max(
@@ -585,21 +577,29 @@
         }
 
         resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
+
+        window.addEventListener(
+          'resize',
+          resizeCanvas
+        );
+
         requestAnimationFrame(animate);
       }
 
-      const locationLink = document.getElementById('locationLink');
+      const locationLink =
+        document.getElementById('locationLink');
 
       locationLink.addEventListener('click', () => {
-        locationLink.style.transform = 'scale(0.97)';
+        locationLink.style.transform =
+          'scale(0.97)';
 
         setTimeout(() => {
           locationLink.style.transform = '';
         }, 160);
       });
 
-      const age = document.querySelector('.age');
+      const age =
+        document.querySelector('.age');
 
       age.addEventListener('click', () => {
         age.animate(
@@ -618,6 +618,5 @@
 
     })();
   </script>
-
 </body>
 </html>
